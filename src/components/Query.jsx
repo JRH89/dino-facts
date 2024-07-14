@@ -10,6 +10,7 @@ export default function Query() {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState(null);
     const [searched, setSearched] = useState('');
+    const [error, setError] = useState(null);
 
     const handleSearchTypeChange = (e) => {
         setSearchType(e.target.value);
@@ -29,9 +30,11 @@ export default function Query() {
             setResults(data);
             setSearched(query);
             setQuery('');
+            setError(null);
 
         } catch (error) {
             console.error('Fetch Error:', error);
+            setError(error);
         }
     };
 
@@ -89,6 +92,7 @@ export default function Query() {
                         </button>
                     </div>
                 </div>
+                {error && <p className="text-red-500">{error.message}</p>}
                 {results && (
                     <div className='px-2 my-auto justify-center  flex flex-col'>
                         <div className="w-full my-8 sm:mb-0 sm:mt-0 lg:mt-0 max-w-lg sm:max-w-2xl lg:max-w-6xl lg:w-full rounded-md bg-white p-4 shadow-lg">
@@ -97,14 +101,14 @@ export default function Query() {
                                 {results.map((dinosaur, index) => (
                                     <div key={index} className="mb-4 p-4 bg-emerald-800 rounded-md">
                                         <h3 className="text-lg font-semibold">{index + 1}. {dinosaur.name}</h3>
-                                        <p><strong>Diet:</strong> {dinosaur.diet}</p>
-                                        <p><strong>Type:</strong> {dinosaur.type}</p>
-                                        <p><strong>Length:</strong> {dinosaur.length_m} meters</p>
-                                        <p><strong>Period:</strong> {dinosaur.min_ma} - {dinosaur.max_ma} million years ago</p>
-                                        <p><strong>Region:</strong> {dinosaur.region}</p>
-                                        <p><strong>Location:</strong> {dinosaur.lat} lat, {dinosaur.lng} lon</p>
-                                        <p><strong>Class:</strong> {dinosaur.class}</p>
-                                        <p><strong>Family:</strong> {dinosaur.family}</p>
+                                        <p><strong>Diet:</strong> <span className='capitalize'>{dinosaur.diet}</span> </p>
+                                        <p><strong>Type:</strong> <span className='capitalize'> {dinosaur.type}</span></p>
+                                        <p><strong>Length:</strong>{dinosaur.length_m} meters</p>
+                                        <p><strong>Period:</strong>  {dinosaur.min_ma} - {dinosaur.max_ma} million years ago</p>
+                                        <p><strong>Region:</strong> <span className='capitalize'>{dinosaur.region}</span> </p>
+                                        <p><strong>Location:</strong>  {dinosaur.lat} Lat.,<br /> {dinosaur.lng} Lon.</p>
+                                        <p><strong>Class:</strong> <span className='capitalize'>{dinosaur.class}</span> </p>
+                                        <p><strong>Family:</strong> <span className='capitalize'>{dinosaur.family}</span> </p>
                                     </div>
                                 ))}
                             </div>
