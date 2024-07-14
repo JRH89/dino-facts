@@ -13,7 +13,7 @@ const metadata = {
     url: "https://dino-facts.vercel.app",
     title: "Dino Facts App",
     description: "Explore fascinating dinosaur fossil facts with the Dino Facts App.",
-    image: "/dino-preview.png", // Ensure this image exists in your public folder
+    image: "https://dino-facts.vercel.app/dino-preview.png", // Ensure this image exists in your public folder
     site_name: "Dino Facts App"
   },
   social: {
