@@ -14,7 +14,7 @@ const metadata = {
     },
     social: {
         github: 'https://github.com/jrh89',
-        twitter: 'https://x.com/GameDevJared89',
+        twitter: 'https://twitter.com/GameDevJared89', // Corrected Twitter URL
         linkedin: 'https://www.linkedin.com/in/jaredhooker',
         youtube: 'https://www.youtube.com/@hookerhillstudios',
         email: 'hookerhillstudios@gmail.com'
