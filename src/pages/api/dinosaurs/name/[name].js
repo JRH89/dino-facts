@@ -1,10 +1,9 @@
-// File: api/dinosaurs/name/[name].js
+// File: pages/api/dinosaurs/name/[name].js
 
 import { supabase } from '../../../../supabaseClient';
+
 export default async function handler(req, res) {
     const { name } = req.query;
-
-    console.log(`Fetching dinosaurs with name: ${name}`);
 
     if (req.method !== 'GET') {
         res.status(405).json({ message: 'Method Not Allowed' });
@@ -12,24 +11,23 @@ export default async function handler(req, res) {
     }
 
     try {
-        const db = await supabase();
-        const { data: dinosaurs, error } = await db
+        const { data, error } = await supabase
             .from('dinosaur_facts')
             .select('*')
-            .eq('name', name.toUpperCase());
+            .ilike('name', `%${name}%`); // Use ilike for case-insensitive search
 
         if (error) {
-            throw error;
-        }
-
-        console.log(`Found ${dinosaurs.length} dinosaurs`);
-
-        if (!dinosaurs.length) {
-            res.status(404).json({ message: 'No dinosaurs found' });
+            console.error('Error fetching dinosaurs by name:', error);
+            res.status(500).json({ message: 'Internal Server Error' });
             return;
         }
 
-        res.status(200).json(dinosaurs);
+        if (data.length === 0) {
+            res.status(404).json({ message: 'No dinosaurs found with this name' });
+            return;
+        }
+
+        res.status(200).json(data);
     } catch (error) {
         console.error('Error fetching dinosaurs by name:', error);
         res.status(500).json({ message: 'Internal Server Error' });
