@@ -6,7 +6,7 @@ const metadata = {
     robots: "index, follow",
     openGraph: {
         type: "website",
-        url: "https://dino-facts.vercel.app",
+        url: "https://dino-facts.hookerhillstudios.com/",
         title: "Dino Facts App",
         description: "Explore fascinating dinosaur facts with the Dino Facts App.",
         image: "https://dino-facts.vercel.app/dino-preview.png", // Ensure this image exists in your public folder

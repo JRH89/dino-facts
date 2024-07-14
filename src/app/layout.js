@@ -10,10 +10,10 @@ const metadata = {
   robots: "index, follow",
   openGraph: {
     type: "website",
-    url: "https://dino-facts.vercel.app",
+    url: "https://dino-facts.hookerhillstudios.com/",
     title: "Dino Facts App",
     description: "Explore fascinating dinosaur fossil facts with the Dino Facts App.",
-    image: "https://dino-facts.vercel.app/dino-preview.png", // Ensure this image exists in your public folder
+    image: "https://dino-facts.hookerhillstudios.com/dino-preview.png", // Ensure this image exists in your public folder
     site_name: "Dino Facts App"
   },
   social: {
@@ -26,7 +26,7 @@ const metadata = {
   locale: 'en-US',
   language: 'en',
   keywords: "custom software, software development, seo, web development, software engineer, custom, software, software, development, mobile apps, saas, websites, video games, custom software solutions, cloud based saas, cloud based software, cloud based software solutions, cloud based software development, ai development, custom software development, hooker hill studios, jared hooker",
-  siteUrl: "https://dino-facts.vercel.app"
+  siteUrl: "https://dino-facts.hookerhillstudios.com/"
 };
 
 export default function RootLayout({ children }) {
