@@ -1,0 +1,11 @@
+<!-- public/sitemap.xml -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://dino-facts.vercel.app/</loc> <!-- Replace with your actual URL -->
+        <lastmod>2024-07-15</lastmod> <!-- Last modified date (optional) -->
+        <changefreq>weekly</changefreq> <!-- How often the page is likely to change (optional) -->
+        <priority>1.0</priority> <!-- Priority of the URL relative to other URLs on your site (optional) -->
+    </url>
+</urlset>
