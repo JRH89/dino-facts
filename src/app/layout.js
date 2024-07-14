@@ -1,7 +1,6 @@
 // RootLayout.js
 import './globals.css'
 import { Inter } from 'next/font/google';
-import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -33,7 +32,7 @@ const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <Head>
+      <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{metadata.title}</title>
@@ -64,7 +63,7 @@ export default function RootLayout({ children }) {
 
         {/* Google Analytics */}
 
-      </Head>
+      </head>
       <html lang={metadata.language} className={inter.className}>
         <body>
           {children}
