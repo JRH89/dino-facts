@@ -1,11 +1,7 @@
 // pages/_app.js or RootLayout.js
 
 import { Inter } from 'next/font/google';
-import { AuthProvider } from '../../context/AuthProvider';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/react';
 import siteMetadata from '../../siteMetadata';
-import Popup from '@/src/components/LeadCapture';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -56,12 +52,7 @@ export default function RootLayout({ children }) {
       </head>
       <html lang={siteMetadata.language} className={inter.className}>
         <body className="bg-gray-800 text-neutral-950 select-none">
-          <Popup />
-          <AuthProvider>
-            {children}
-          </AuthProvider>
-          <SpeedInsights />
-          <Analytics />
+          {children}
         </body>
       </html>
     </>
