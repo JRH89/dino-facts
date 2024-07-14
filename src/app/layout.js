@@ -1,5 +1,5 @@
 // RootLayout.js
-
+import './globals.css'
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
 
       </Head>
       <html lang={metadata.language} className={inter.className}>
-        <body className="bg-gray-800 text-neutral-950 select-none">
+        <body>
           {children}
         </body>
       </html>
