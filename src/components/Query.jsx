@@ -4,6 +4,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import BannerAdTwo from './BannerAd';
 
 export default function Query() {
     const [searchType, setSearchType] = useState('name');
@@ -60,10 +61,10 @@ export default function Query() {
     return (
         <>
             <div className="min-h-screen h-full w-full flex flex-col justify-start items-center bg-emerald-800 text-white">
-                <div className='text-center justify-center flex flex-col bg-white text-emerald-800 w-full py-4'>
-                    <p className="font-bold text-3xl">Dinosaur Fossil Occurrence Database</p>
+                <div className='text-center justify-center flex flex-col bg-white text-emerald-800 w-full py-2 sm:py-4'>
+                    <p className="font-bold text-xl px-5 sm:text-3xl">Dinosaur Fossil Occurrence Database</p>
                 </div>
-                <div className="flex flex-col items-center justify-center space-y-4 mt-8">
+                <div className="flex flex-col items-center justify-center space-y-4 mt-4">
                     <select
                         className="p-2 w-80 text-black bg-gray-200 rounded-md"
                         value={searchType}
@@ -94,13 +95,13 @@ export default function Query() {
                 </div>
                 {error && <p className="text-red-500">{error.message}</p>}
                 {results && (
-                    <div className='px-2 my-auto justify-center  flex flex-col'>
-                        <div className="w-full my-8 sm:mb-0 sm:mt-0 lg:mt-0 max-w-lg sm:max-w-2xl lg:max-w-6xl lg:w-full rounded-md bg-white p-4 shadow-lg">
-                            <h2 className="text-xl font-bold mb-4 text-emerald-800 text-center">Results ({results.length}) for &quot;{searched}&quot;</h2>
+                    <div className='px-2 mt-4 justify-start h-full items-start flex flex-col'>
+                        <div className="w-full mb-8 sm:mb-0 sm:mt-0 lg:mt-0 max-w-lg sm:max-w-2xl lg:max-w-6xl lg:w-full rounded-md bg-white p-4 shadow-lg">
+                            <h2 className="text-base  sm:text-xl font-bold mb-4 text-emerald-800 text-center">Results ({results.length}) for &quot;{searched}&quot;</h2>
                             <div className="overflow-auto max-h-80 lg:grid lg:grid-cols-3 sm:grid-cols-2 sm:grid sm:gap-4">
                                 {results.map((dinosaur, index) => (
-                                    <div key={index} className="mb-4 p-4 bg-emerald-800 rounded-md">
-                                        <h3 className="text-lg font-semibold">{index + 1}. {dinosaur.name}</h3>
+                                    <div key={index} className="mb-4 p-4 bg-emerald-800 rounded-md text-sm sm:text-lg ">
+                                        <h3 className="text-md sm:text-lg font-semibold">{index + 1}. {dinosaur.name}</h3>
                                         <p><strong>Diet:</strong> <span className='capitalize'>{dinosaur.diet}</span> </p>
                                         <p><strong>Type:</strong> <span className='capitalize'> {dinosaur.type}</span></p>
                                         <p><strong>Length:</strong>{dinosaur.length_m} meters</p>
@@ -146,6 +147,7 @@ export default function Query() {
                     <p className="pt-4">&copy; 2024 Hooker Hill Studios</p>
                 </div>
             </footer>
+            <BannerAdTwo />
         </>
     );
 }
