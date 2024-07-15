@@ -67,14 +67,15 @@ curl https://dino-facts.vercel.app/api/dinosaurs/type/theropod
 ### Using the UI
 
 1. You can access the UI in the [Dino Facts](https://dino-facts.vercel.app/) project.
+   <img src="/readme/1.png />
 
-2. Select the query type (Name, Diet, Region, Class, Family, Type) from the dropdown menu.
+3. Select the query type (Name, Diet, Region, Class, Family, Type) from the dropdown menu.
 
-3. Enter your query in the input field.
+4. Enter your query in the input field.
 
-4. Click on the "Search" button to retrieve results.
+5. Click on the "Search" button to retrieve results.
 
-5. View the dinosaur facts displayed on the page.
+6. View the dinosaur facts displayed on the page.
 
 ### Examples
 
