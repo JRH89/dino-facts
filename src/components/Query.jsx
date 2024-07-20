@@ -141,7 +141,6 @@ export default function Query() {
                 </div>
                 <div className="text-center text-lg md:text-2xl py-4">
                     <p className="flex flex-col">
-                        <a href="tel:+1 (909) 809-5222" className="hover:scale-105 hover:text-emerald-600 transition duration-300">1.909.809.5222</a>
                         <a href="mailto:hookerhillstudios@gmail.com" className="hover:scale-105 hover:text-emerald-600 transition duration-300">hookerhillstudios@gmail.com</a>
                         <a href="https://www.hookerhillstudios.com" className="hover:scale-105 hover:text-emerald-600 transition duration-300">www.hookerhillstudios.com</a>
                     </p>
