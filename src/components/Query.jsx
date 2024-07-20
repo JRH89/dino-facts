@@ -118,7 +118,11 @@ export default function Query() {
                 )}
             </div>
             <footer data-testid="footer" className="bg-neutral-50 border-t border-gray-300 text-gray-800 w-full flex flex-col items-center">
-
+                <div className='pt-5'>
+                    <Link href="https://www.kaggle.com/datasets/smruthiiii/dinosaur-dataset" className="text-xl hover:text-emerald-600 hover:scale-110 transition duration-300 px-2">
+                        Dataset
+                    </Link>
+                </div>
                 <div className='py-5'>
                     <Link href="/docs" className="text-xl hover:text-emerald-600 hover:scale-110 transition duration-300 px-2">
                         API Docs
