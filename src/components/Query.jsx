@@ -128,6 +128,11 @@ export default function Query() {
                         Dataset
                     </Link>
                 </div>
+                <div className='pb-5 text-center'>
+                    <Link href="https://github.com/JRH89/dino-facts" className="text-xl hover:text-emerald-600  transition duration-300 px-2">
+                        Source Code
+                    </Link>
+                </div>
 
                 <div className="flex justify-center space-x-4 py-6">
                     <a data-testid="linkedin" href="https://blog.hookerhillstudios.com/" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-emerald-600  transition duration-300 px-2">
