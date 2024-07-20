@@ -25,7 +25,7 @@ export default function Query() {
         try {
             const res = await fetch(`/api/dinosaurs/${searchType}/${encodedQuery}`);
             if (!res.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error('No records found...');
             }
             const data = await res.json();
             setResults(data);
