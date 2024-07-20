@@ -2,6 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
+import BannerAdTwo from './BannerAd';
+
 
 const baseUrl = 'https://dino-facts.vercel.app';
 
@@ -96,28 +98,32 @@ const ApiDocsPage = () => {
                     </section>
                 </div>
             </div>
-            <footer data-testid="footer" className="bg-neutral-50 border-t border-gray-300 text-gray-800 w-full">
-                <div className='py-5 text-center'>
-                    <Link href="/" className="text-xl hover:text-emerald-600 hover:scale-110 transition duration-300 px-2">
+            <footer data-testid="footer" className="mb-24 bg-neutral-50 border-t border-gray-300 text-gray-800 w-full">
+                <div className='pt-5 text-center'>
+                    <Link href="/" className="text-xl hover:text-emerald-600  transition duration-300 px-2">
                         Home
                     </Link>
                 </div>
+                <div className='py-5 text-center'>
+                    <Link href="https://www.kaggle.com/datasets/smruthiiii/dinosaur-dataset" className="text-xl hover:text-emerald-600  transition duration-300 px-2">
+                        Dataset
+                    </Link>
+                </div>
                 <div className="flex justify-center space-x-4 py-6">
-                    <a data-testid="linkedin" href="https://blog.hookerhillstudios.com/" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-emerald-600 hover:scale-110 transition duration-300 px-2">
+                    <a data-testid="linkedin" href="https://blog.hookerhillstudios.com/" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-emerald-600  transition duration-300 px-2">
                         <i className="fa fa-newspaper"></i>
                     </a>
-                    <a href="https://play.google.com/store/apps/dev?id=4957396816342892948&hl=en_US" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-emerald-600 hover:scale-110 transition duration-300 px-2">
+                    <a href="https://play.google.com/store/apps/dev?id=4957396816342892948&hl=en_US" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-emerald-600  transition duration-300 px-2">
                         <i className="fa-brands fa-google-play"></i>
                     </a>
-                    <a data-testid="youtube" href="https://www.youtube.com/@hookerhillstudios" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-emerald-600 hover:scale-110 transition duration-300 px-2">
+                    <a data-testid="youtube" href="https://www.youtube.com/@hookerhillstudios" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-emerald-600  transition duration-300 px-2">
                         <i className="fab fa-youtube"></i>
                     </a>
                 </div>
                 <div className="text-center text-lg md:text-2xl py-4">
                     <p className="flex flex-col">
-                        <a href="tel:+1 (909) 809-5222" className="hover:scale-105 hover:text-emerald-600 transition duration-300">1.909.809.5222</a>
-                        <a href="mailto:hookerhillstudios@gmail.com" className="hover:scale-105 hover:text-emerald-600 transition duration-300">hookerhillstudios@gmail.com</a>
-                        <a href="https://www.hookerhillstudios.com" className="hover:scale-105 hover:text-emerald-600 transition duration-300">www.hookerhillstudios.com</a>
+                        <a href="mailto:hookerhillstudios@gmail.com" className=" hover:text-emerald-600 transition duration-300">hookerhillstudios@gmail.com</a>
+                        <a href="https://www.hookerhillstudios.com" className=" hover:text-emerald-600 transition duration-300">www.hookerhillstudios.com</a>
                     </p>
                 </div>
                 <div className="text-center text-lg md:text-2xl py-4 w-full">
@@ -125,6 +131,7 @@ const ApiDocsPage = () => {
                     <p className="pt-4">&copy; 2024 Hooker Hill Studios</p>
                 </div>
             </footer>
+            <BannerAdTwo />
         </div>
     );
 };
