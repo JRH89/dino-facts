@@ -109,4 +109,4 @@ fetch('https://dino-facts.vercel.app/api/dinosaurs/region/colorado')
 
 ## Support
 
-For any issues or questions, please contact us at [mailto:hookerhillstudios.com](mailto:hookerhillstudios.com) with your query or issue.
+For any issues or questions, please contact me at [hookerhillstudios.com](hookerhillstudios.com) with your query or issue.
